@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/inquilinos",
+      "handler": "inquilinos.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/inquilinos/count",
+      "handler": "inquilinos.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/inquilinos/:id",
+      "handler": "inquilinos.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/inquilinos",
+      "handler": "inquilinos.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/inquilinos/:id",
+      "handler": "inquilinos.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/inquilinos/:id",
+      "handler": "inquilinos.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
