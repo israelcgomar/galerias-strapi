@@ -1,0 +1,28 @@
+{
+  "info": {
+    "name": "mall"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "telephoneNumber": {
+      "type": "string"
+    },
+    "services": {
+      "type": "json"
+    },
+    "pisos": {
+      "type": "json"
+    }
+  },
+  "connection": "default",
+  "collectionName": "malls"
+}
