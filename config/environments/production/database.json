@@ -1,0 +1,19 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "mongoose",
+      "settings": {
+        "database": "test",
+        "host": "cluster-galerias-gtiki.gcp.mongodb.net/test?retryWrites=true",
+        "srv": true,
+        "port": 27017,
+        "username": "frh",
+        "password": "m0ng0.galerias"
+      },
+      "options": {
+        "ssl": true
+      }
+    }
+  }
+}

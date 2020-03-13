@@ -1,0 +1,25 @@
+
+env: flex
+runtime: nodejs
+# instance_class: F2
+# service: admin
+# env_variables:
+#   DATABASE_HOST: cluster-galerias-gtiki.gcp.mongodb.net/test?retryWrites=true
+#   DATABASE_PORT: 27017
+#   DATABASE_NAME: test
+#   DATABASE_USERNAME: frh
+#   DATABASE_PASSWORD: m0ng0.galerias
+#   DATABASE_SRV: true
+#   DATABASE_AUTHENTICATION_DATABASE: admin
+#   DATABASE_SSL: true
+#   NODE_ENV: develop
+  # PORT: 1337
+
+manual_scaling:
+  instances: 1
+
+resources:
+  cpu: 2
+  memory_gb: 0.5
+  disk_size_gb: 10
+
