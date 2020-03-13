@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "inquilinos",
   "info": {
     "name": "Inquilinos"
   },
@@ -36,8 +38,10 @@
     },
     "type": {
       "type": "string"
+    },
+    "tienda": {
+      "via": "inquilino",
+      "model": "tiendas"
     }
-  },
-  "connection": "default",
-  "collectionName": "inquilinos"
+  }
 }

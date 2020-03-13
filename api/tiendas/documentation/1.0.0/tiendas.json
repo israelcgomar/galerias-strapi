@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/inquilinos": {
+    "/tiendas": {
       "get": {
         "deprecated": false,
-        "description": "Find all the inquilinos's records",
+        "description": "Find all the tiendas's records",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Inquilinos"
+                    "$ref": "#/components/schemas/Tiendas"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Tiendas"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new inquilinos record",
+        "description": "Create a new tiendas record",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Inquilinos"
+                  "$ref": "#/components/schemas/Tiendas"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Tiendas"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewInquilinos"
+                "$ref": "#/components/schemas/NewTiendas"
               }
             }
           }
         }
       }
     },
-    "/inquilinos/count": {
+    "/tiendas/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of inquilinos documents",
+        "description": "Retrieve the numver of tiendas documents",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Tiendas"
         ],
         "parameters": []
       }
     },
-    "/inquilinos/{id}": {
+    "/tiendas/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one inquilinos record",
+        "description": "Find one tiendas record",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Inquilinos"
+                  "$ref": "#/components/schemas/Tiendas"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Tiendas"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single inquilinos record",
+        "description": "Update a single tiendas record",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Inquilinos"
+                  "$ref": "#/components/schemas/Tiendas"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Tiendas"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewInquilinos"
+                "$ref": "#/components/schemas/NewTiendas"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single inquilinos record",
+        "description": "Delete a single tiendas record",
         "responses": {
           "200": {
-            "description": "deletes a single inquilinos based on the ID supplied",
+            "description": "deletes a single tiendas based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Tiendas"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Inquilinos": {
+      "Tiendas": {
         "required": [
           "id"
         ],
@@ -522,37 +522,13 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "nombre": {
             "type": "string"
           },
-          "telephoneNumber": {
-            "type": "integer"
-          },
-          "extensionNumber": {
-            "type": "integer"
-          },
-          "cellphoneNumber": {
-            "type": "integer"
-          },
-          "email": {
+          "fachada": {
             "type": "string"
           },
-          "createdAt": {
-            "type": "datetime"
-          },
-          "updatedAt": {
-            "type": "datetime"
-          },
-          "isEnabled": {
-            "type": "boolean"
-          },
-          "tiendas": {
-            "type": "object"
-          },
-          "type": {
-            "type": "string"
-          },
-          "tienda": {
+          "inquilino": {
             "required": [
               "id"
             ],
@@ -560,62 +536,71 @@
               "id": {
                 "type": "string"
               },
-              "nombre": {
+              "name": {
                 "type": "string"
               },
-              "fachada": {
-                "type": "string"
-              },
-              "inquilino": {
-                "type": "string"
-              },
-              "marca": {
-                "type": "string"
-              },
-              "local": {
+              "telephoneNumber": {
                 "type": "integer"
               },
-              "piso": {
-                "type": "number"
+              "extensionNumber": {
+                "type": "integer"
+              },
+              "cellphoneNumber": {
+                "type": "integer"
+              },
+              "email": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "datetime"
+              },
+              "updatedAt": {
+                "type": "datetime"
+              },
+              "isEnabled": {
+                "type": "boolean"
+              },
+              "tiendas": {
+                "type": "object"
+              },
+              "type": {
+                "type": "string"
+              },
+              "tienda": {
+                "type": "string"
               }
             }
+          },
+          "marca": {
+            "type": "string"
+          },
+          "local": {
+            "type": "integer"
+          },
+          "piso": {
+            "type": "number"
           }
         }
       },
-      "NewInquilinos": {
+      "NewTiendas": {
         "properties": {
-          "name": {
+          "nombre": {
             "type": "string"
           },
-          "telephoneNumber": {
+          "fachada": {
+            "type": "string"
+          },
+          "inquilino": {
+            "type": "string"
+          },
+          "marca": {
+            "type": "string"
+          },
+          "local": {
             "type": "integer"
           },
-          "extensionNumber": {
-            "type": "integer"
-          },
-          "cellphoneNumber": {
-            "type": "integer"
-          },
-          "email": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "datetime"
-          },
-          "updatedAt": {
-            "type": "datetime"
-          },
-          "isEnabled": {
-            "type": "boolean"
-          },
-          "tiendas": {
-            "type": "object"
-          },
-          "type": {
-            "type": "string"
-          },
-          "tienda": {
-            "type": "string"
+          "piso": {
+            "type": "number"
           }
         }
       }
@@ -623,7 +608,7 @@
   },
   "tags": [
     {
-      "name": "Inquilinos"
+      "name": "Tiendas"
     }
   ]
 }
