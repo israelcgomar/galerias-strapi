@@ -1,0 +1,40 @@
+{
+  "info": {
+    "name": "JefeMarca"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "telephoneNumber": {
+      "type": "integer"
+    },
+    "extensionNumber": {
+      "type": "integer"
+    },
+    "cellphoneNumber": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "email"
+    },
+    "isEnabled": {
+      "type": "boolean"
+    },
+    "centroComercial": {
+      "type": "string"
+    },
+    "avatar": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  },
+  "connection": "default",
+  "collectionName": "jefe_marcas"
+}
