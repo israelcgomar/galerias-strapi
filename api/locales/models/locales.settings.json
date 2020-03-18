@@ -1,0 +1,31 @@
+{
+  "info": {
+    "name": "Locales"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "numero": {
+      "type": "integer"
+    },
+    "superficie": {
+      "type": "string"
+    },
+    "centroComercial": {
+      "type": "string"
+    },
+    "piso": {
+      "type": "integer"
+    },
+    "isRented": {
+      "type": "boolean"
+    },
+    "isEnable": {
+      "type": "boolean"
+    }
+  },
+  "connection": "default",
+  "collectionName": "locales"
+}
