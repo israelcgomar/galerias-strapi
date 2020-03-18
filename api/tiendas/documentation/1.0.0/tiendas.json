@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/locals": {
+    "/tiendas": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the tiendas's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Local"
+                    "$ref": "#/components/schemas/Tiendas"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Local"
+          "Tiendas"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new tiendas record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Local"
+                  "$ref": "#/components/schemas/Tiendas"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Local"
+          "Tiendas"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewLocal"
+                "$ref": "#/components/schemas/NewTiendas"
               }
             }
           }
         }
       }
     },
-    "/locals/count": {
+    "/tiendas/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of tiendas documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Local"
+          "Tiendas"
         ],
         "parameters": []
       }
     },
-    "/locals/{id}": {
+    "/tiendas/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one tiendas record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Local"
+                  "$ref": "#/components/schemas/Tiendas"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Local"
+          "Tiendas"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single tiendas record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Local"
+                  "$ref": "#/components/schemas/Tiendas"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Local"
+          "Tiendas"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewLocal"
+                "$ref": "#/components/schemas/NewTiendas"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single tiendas record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single tiendas based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Local"
+          "Tiendas"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Local": {
+      "Tiendas": {
         "required": [
           "id"
         ],
@@ -522,16 +522,13 @@
           "id": {
             "type": "string"
           },
-          "number": {
+          "nombre": {
             "type": "string"
           },
-          "isRented": {
-            "type": "boolean"
-          },
-          "area": {
+          "fachada": {
             "type": "string"
           },
-          "tienda": {
+          "inquilino": {
             "required": [
               "id"
             ],
@@ -539,41 +536,71 @@
               "id": {
                 "type": "string"
               },
-              "nombre": {
+              "name": {
                 "type": "string"
               },
-              "fachada": {
-                "type": "string"
-              },
-              "inquilino": {
-                "type": "string"
-              },
-              "marca": {
-                "type": "string"
-              },
-              "local": {
+              "telephoneNumber": {
                 "type": "integer"
               },
-              "piso": {
-                "type": "number"
+              "extensionNumber": {
+                "type": "integer"
+              },
+              "cellphoneNumber": {
+                "type": "integer"
+              },
+              "email": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "datetime"
+              },
+              "updatedAt": {
+                "type": "datetime"
+              },
+              "isEnabled": {
+                "type": "boolean"
+              },
+              "tiendas": {
+                "type": "object"
+              },
+              "type": {
+                "type": "string"
+              },
+              "tienda": {
+                "type": "string"
               }
             }
+          },
+          "marca": {
+            "type": "string"
+          },
+          "local": {
+            "type": "integer"
+          },
+          "piso": {
+            "type": "number"
           }
         }
       },
-      "NewLocal": {
+      "NewTiendas": {
         "properties": {
-          "number": {
+          "nombre": {
             "type": "string"
           },
-          "isRented": {
-            "type": "boolean"
-          },
-          "area": {
+          "fachada": {
             "type": "string"
           },
-          "tienda": {
+          "inquilino": {
             "type": "string"
+          },
+          "marca": {
+            "type": "string"
+          },
+          "local": {
+            "type": "integer"
+          },
+          "piso": {
+            "type": "number"
           }
         }
       }
@@ -581,7 +608,7 @@
   },
   "tags": [
     {
-      "name": "Local"
+      "name": "Tiendas"
     }
   ]
 }

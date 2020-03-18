@@ -1,0 +1,32 @@
+{
+  "info": {
+    "name": "Tiendas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "fachada": {
+      "type": "string"
+    },
+    "inquilino": {
+      "model": "inquilinos",
+      "via": "tienda"
+    },
+    "marca": {
+      "type": "string"
+    },
+    "local": {
+      "type": "integer"
+    },
+    "piso": {
+      "type": "float"
+    }
+  },
+  "connection": "default",
+  "collectionName": "tiendas"
+}

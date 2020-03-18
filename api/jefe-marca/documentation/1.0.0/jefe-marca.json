@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/locals": {
+    "/jefe-marcas": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Local"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Local"
+          "Jefe-marca"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Local"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Local"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewLocal"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/locals/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Local"
+          "Jefe-marca"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewJefe-marca"
+              }
+            }
+          }
+        }
       }
     },
-    "/locals/{id}": {
+    "/jefe-marcas/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Local"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Local"
+          "Jefe-marca"
+        ],
+        "parameters": []
+      }
+    },
+    "/jefe-marcas/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Jefe-marca"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Local"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Local"
+          "Jefe-marca"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewLocal"
+                "$ref": "#/components/schemas/NewJefe-marca"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Local"
+          "Jefe-marca"
         ],
         "parameters": [
           {
@@ -514,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Local": {
+      "Jefe-marca": {
         "required": [
           "id"
         ],
@@ -522,66 +535,104 @@
           "id": {
             "type": "string"
           },
-          "number": {
+          "nombre": {
             "type": "string"
           },
-          "isRented": {
+          "telephoneNumber": {
+            "type": "integer"
+          },
+          "extensionNumber": {
+            "type": "integer"
+          },
+          "cellphoneNumber": {
+            "type": "integer"
+          },
+          "email": {
+            "type": "string"
+          },
+          "isEnabled": {
             "type": "boolean"
           },
-          "area": {
+          "centroComercial": {
             "type": "string"
           },
-          "tienda": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "fachada": {
-                "type": "string"
-              },
-              "inquilino": {
-                "type": "string"
-              },
-              "marca": {
-                "type": "string"
-              },
-              "local": {
-                "type": "integer"
-              },
-              "piso": {
-                "type": "number"
+          "avatar": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
               }
             }
           }
         }
       },
-      "NewLocal": {
+      "NewJefe-marca": {
         "properties": {
-          "number": {
+          "nombre": {
             "type": "string"
           },
-          "isRented": {
+          "telephoneNumber": {
+            "type": "integer"
+          },
+          "extensionNumber": {
+            "type": "integer"
+          },
+          "cellphoneNumber": {
+            "type": "integer"
+          },
+          "email": {
+            "type": "string"
+          },
+          "isEnabled": {
             "type": "boolean"
           },
-          "area": {
-            "type": "string"
-          },
-          "tienda": {
+          "centroComercial": {
             "type": "string"
           }
         }
       }
     }
   },
-  "tags": [
-    {
-      "name": "Local"
-    }
-  ]
+  "tags": []
 }

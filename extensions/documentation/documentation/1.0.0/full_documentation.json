@@ -14,7 +14,8 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/17/2020 8:56:12 PM"
+
+    "x-generation-date": "03/17/2020 3:34:40 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4285,6 +4286,34 @@
           },
           "locals": {
             "type": "string"
+          },
+          "tienda": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "fachada": {
+                "type": "string"
+              },
+              "inquilino": {
+                "type": "string"
+              },
+              "marca": {
+                "type": "string"
+              },
+              "local": {
+                "type": "integer"
+              },
+              "piso": {
+                "type": "number"
+              }
+            }
           }
         }
       },
@@ -4316,6 +4345,114 @@
             "type": "boolean"
           },
           "area": {
+            "type": "string"
+          },
+          "tienda": {
+            "type": "string"
+          }
+        }
+      },
+      "Jefe-marca": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "telephoneNumber": {
+            "type": "integer"
+          },
+          "extensionNumber": {
+            "type": "integer"
+          },
+          "cellphoneNumber": {
+            "type": "integer"
+          },
+          "email": {
+            "type": "string"
+          },
+          "isEnabled": {
+            "type": "boolean"
+          },
+          "centroComercial": {
+            "type": "string"
+          },
+          "avatar": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "NewJefe-marca": {
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "telephoneNumber": {
+            "type": "integer"
+          },
+          "extensionNumber": {
+            "type": "integer"
+          },
+          "cellphoneNumber": {
+            "type": "integer"
+          },
+          "email": {
+            "type": "string"
+          },
+          "isEnabled": {
+            "type": "boolean"
+          },
+          "centroComercial": {
             "type": "string"
           }
         }
@@ -4413,6 +4550,96 @@
           },
           "price": {
             "type": "string"
+          }
+        }
+      },
+      "Tiendas": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "fachada": {
+            "type": "string"
+          },
+          "inquilino": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "telephoneNumber": {
+                "type": "integer"
+              },
+              "extensionNumber": {
+                "type": "integer"
+              },
+              "cellphoneNumber": {
+                "type": "integer"
+              },
+              "email": {
+                "type": "string"
+              },
+              "createdAt": {
+                "type": "datetime"
+              },
+              "updatedAt": {
+                "type": "datetime"
+              },
+              "isEnabled": {
+                "type": "boolean"
+              },
+              "tiendas": {
+                "type": "object"
+              },
+              "type": {
+                "type": "string"
+              },
+              "tienda": {
+                "type": "string"
+              }
+            }
+          },
+          "marca": {
+            "type": "string"
+          },
+          "local": {
+            "type": "integer"
+          },
+          "piso": {
+            "type": "number"
+          }
+        }
+      },
+      "NewTiendas": {
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "fachada": {
+            "type": "string"
+          },
+          "inquilino": {
+            "type": "string"
+          },
+          "marca": {
+            "type": "string"
+          },
+          "local": {
+            "type": "integer"
+          },
+          "piso": {
+            "type": "number"
           }
         }
       },
