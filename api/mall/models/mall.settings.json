@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "malls",
   "info": {
     "name": "mall"
   },
@@ -16,13 +18,11 @@
     "telephoneNumber": {
       "type": "string"
     },
-    "services": {
-      "type": "json"
+    "floors": {
+      "collection": "floor"
     },
-    "pisos": {
-      "type": "json"
+    "services": {
+      "collection": "services"
     }
-  },
-  "connection": "default",
-  "collectionName": "malls"
+  }
 }

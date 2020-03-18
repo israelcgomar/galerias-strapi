@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/inquilinos": {
+    "/services": {
       "get": {
         "deprecated": false,
-        "description": "Find all the inquilinos's records",
+        "description": "Find all the services's records",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Inquilinos"
+                    "$ref": "#/components/schemas/Services"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Services"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new inquilinos record",
+        "description": "Create a new services record",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Inquilinos"
+                  "$ref": "#/components/schemas/Services"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Services"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewInquilinos"
+                "$ref": "#/components/schemas/NewServices"
               }
             }
           }
         }
       }
     },
-    "/inquilinos/count": {
+    "/services/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of inquilinos documents",
+        "description": "Retrieve the numver of services documents",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Services"
         ],
         "parameters": []
       }
     },
-    "/inquilinos/{id}": {
+    "/services/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one inquilinos record",
+        "description": "Find one services record",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Inquilinos"
+                  "$ref": "#/components/schemas/Services"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Services"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single inquilinos record",
+        "description": "Update a single services record",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Inquilinos"
+                  "$ref": "#/components/schemas/Services"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Services"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewInquilinos"
+                "$ref": "#/components/schemas/NewServices"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single inquilinos record",
+        "description": "Delete a single services record",
         "responses": {
           "200": {
-            "description": "deletes a single inquilinos based on the ID supplied",
+            "description": "deletes a single services based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Services"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Inquilinos": {
+      "Services": {
         "required": [
           "id"
         ],
@@ -522,68 +522,20 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "tipo": {
             "type": "string"
           },
-          "telephoneNumber": {
-            "type": "integer"
-          },
-          "extensionNumber": {
-            "type": "integer"
-          },
-          "cellphoneNumber": {
-            "type": "integer"
-          },
-          "email": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "datetime"
-          },
-          "updatedAt": {
-            "type": "datetime"
-          },
-          "isEnabled": {
-            "type": "boolean"
-          },
-          "tiendas": {
-            "type": "object"
-          },
-          "type": {
+          "price": {
             "type": "string"
           }
         }
       },
-      "NewInquilinos": {
+      "NewServices": {
         "properties": {
-          "name": {
+          "tipo": {
             "type": "string"
           },
-          "telephoneNumber": {
-            "type": "integer"
-          },
-          "extensionNumber": {
-            "type": "integer"
-          },
-          "cellphoneNumber": {
-            "type": "integer"
-          },
-          "email": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "datetime"
-          },
-          "updatedAt": {
-            "type": "datetime"
-          },
-          "isEnabled": {
-            "type": "boolean"
-          },
-          "tiendas": {
-            "type": "object"
-          },
-          "type": {
+          "price": {
             "type": "string"
           }
         }
@@ -592,7 +544,7 @@
   },
   "tags": [
     {
-      "name": "Inquilinos"
+      "name": "Services"
     }
   ]
 }

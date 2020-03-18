@@ -1,0 +1,22 @@
+{
+  "connection": "default",
+  "collectionName": "locals",
+  "info": {
+    "name": "local"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "number": {
+      "type": "string"
+    },
+    "isRented": {
+      "type": "boolean"
+    },
+    "area": {
+      "type": "string"
+    }
+  }
+}

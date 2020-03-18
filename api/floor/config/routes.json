@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/inquilinos",
-      "handler": "inquilinos.find",
+      "path": "/floors",
+      "handler": "floor.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/inquilinos/count",
-      "handler": "inquilinos.count",
+      "path": "/floors/count",
+      "handler": "floor.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/inquilinos/:id",
-      "handler": "inquilinos.findOne",
+      "path": "/floors/:id",
+      "handler": "floor.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/inquilinos",
-      "handler": "inquilinos.create",
+      "path": "/floors",
+      "handler": "floor.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/inquilinos/:id",
-      "handler": "inquilinos.update",
+      "path": "/floors/:id",
+      "handler": "floor.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/inquilinos/:id",
-      "handler": "inquilinos.delete",
+      "path": "/floors/:id",
+      "handler": "floor.delete",
       "config": {
         "policies": []
       }

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/malls": {
+    "/locals": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Mall"
+                    "$ref": "#/components/schemas/Local"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Mall"
+          "Local"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mall"
+                  "$ref": "#/components/schemas/Local"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Mall"
+          "Local"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMall"
+                "$ref": "#/components/schemas/NewLocal"
               }
             }
           }
         }
       }
     },
-    "/malls/count": {
+    "/locals/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Mall"
+          "Local"
         ],
         "parameters": []
       }
     },
-    "/malls/{id}": {
+    "/locals/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mall"
+                  "$ref": "#/components/schemas/Local"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Mall"
+          "Local"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mall"
+                  "$ref": "#/components/schemas/Local"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Mall"
+          "Local"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMall"
+                "$ref": "#/components/schemas/NewLocal"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Mall"
+          "Local"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Mall": {
+      "Local": {
         "required": [
           "id"
         ],
@@ -522,64 +522,26 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "number": {
             "type": "string"
           },
-          "location": {
+          "isRented": {
+            "type": "boolean"
+          },
+          "area": {
             "type": "string"
-          },
-          "telephoneNumber": {
-            "type": "string"
-          },
-          "floors": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "locals": {
-                "type": "string"
-              }
-            }
-          },
-          "services": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "tipo": {
-                "type": "string"
-              },
-              "price": {
-                "type": "string"
-              }
-            }
           }
         }
       },
-      "NewMall": {
+      "NewLocal": {
         "properties": {
-          "name": {
+          "number": {
             "type": "string"
           },
-          "location": {
-            "type": "string"
+          "isRented": {
+            "type": "boolean"
           },
-          "telephoneNumber": {
-            "type": "string"
-          },
-          "floors": {
-            "type": "string"
-          },
-          "services": {
+          "area": {
             "type": "string"
           }
         }
@@ -588,7 +550,7 @@
   },
   "tags": [
     {
-      "name": "Mall"
+      "name": "Local"
     }
   ]
 }
