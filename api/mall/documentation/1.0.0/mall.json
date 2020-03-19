@@ -531,22 +531,6 @@
           "telephoneNumber": {
             "type": "string"
           },
-          "floors": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "locals": {
-                "type": "string"
-              }
-            }
-          },
           "services": {
             "required": [
               "id"
@@ -559,6 +543,22 @@
                 "type": "string"
               },
               "price": {
+                "type": "string"
+              }
+            }
+          },
+          "floors": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "locals": {
                 "type": "string"
               }
             }
@@ -576,10 +576,10 @@
           "telephoneNumber": {
             "type": "string"
           },
-          "floors": {
+          "services": {
             "type": "string"
           },
-          "services": {
+          "floors": {
             "type": "string"
           }
         }

@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "jefe_marcas",
   "info": {
     "name": "JefeMarca"
   },
@@ -25,16 +27,14 @@
     "isEnabled": {
       "type": "boolean"
     },
-    "centroComercial": {
-      "type": "string"
-    },
     "avatar": {
       "collection": "file",
       "via": "related",
       "plugin": "upload",
       "required": false
+    },
+    "mall": {
+      "model": "mall"
     }
-  },
-  "connection": "default",
-  "collectionName": "jefe_marcas"
+  }
 }

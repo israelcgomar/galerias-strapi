@@ -33,15 +33,11 @@
     "isEnabled": {
       "type": "boolean"
     },
-    "tiendas": {
-      "type": "json"
-    },
     "type": {
       "type": "string"
     },
-    "tienda": {
-      "via": "inquilino",
-      "model": "tiendas"
+    "tiendas": {
+      "collection": "tiendas"
     }
   }
 }

@@ -530,34 +530,6 @@
           },
           "area": {
             "type": "string"
-          },
-          "tienda": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "fachada": {
-                "type": "string"
-              },
-              "inquilino": {
-                "type": "string"
-              },
-              "marca": {
-                "type": "string"
-              },
-              "local": {
-                "type": "integer"
-              },
-              "piso": {
-                "type": "number"
-              }
-            }
           }
         }
       },
@@ -570,9 +542,6 @@
             "type": "boolean"
           },
           "area": {
-            "type": "string"
-          },
-          "tienda": {
             "type": "string"
           }
         }

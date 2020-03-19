@@ -553,9 +553,6 @@
           "isEnabled": {
             "type": "boolean"
           },
-          "centroComercial": {
-            "type": "string"
-          },
           "avatar": {
             "type": "array",
             "items": {
@@ -604,6 +601,31 @@
                 }
               }
             }
+          },
+          "mall": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "location": {
+                "type": "string"
+              },
+              "telephoneNumber": {
+                "type": "string"
+              },
+              "services": {
+                "type": "string"
+              },
+              "floors": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -627,7 +649,7 @@
           "isEnabled": {
             "type": "boolean"
           },
-          "centroComercial": {
+          "mall": {
             "type": "string"
           }
         }
