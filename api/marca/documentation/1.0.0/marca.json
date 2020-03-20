@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/tiendas": {
+    "/marcas": {
       "get": {
         "deprecated": false,
-        "description": "Find all the tiendas's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve tiendas document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Tiendas"
+                    "$ref": "#/components/schemas/Marca"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Tiendas"
+          "Marca"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new tiendas record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve tiendas document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tiendas"
+                  "$ref": "#/components/schemas/Marca"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Tiendas"
+          "Marca"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTiendas"
+                "$ref": "#/components/schemas/NewMarca"
               }
             }
           }
         }
       }
     },
-    "/tiendas/count": {
+    "/marcas/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of tiendas documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve tiendas document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Tiendas"
+          "Marca"
         ],
         "parameters": []
       }
     },
-    "/tiendas/{id}": {
+    "/marcas/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one tiendas record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve tiendas document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tiendas"
+                  "$ref": "#/components/schemas/Marca"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Tiendas"
+          "Marca"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single tiendas record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve tiendas document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tiendas"
+                  "$ref": "#/components/schemas/Marca"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Tiendas"
+          "Marca"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTiendas"
+                "$ref": "#/components/schemas/NewMarca"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single tiendas record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single tiendas based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Tiendas"
+          "Marca"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Tiendas": {
+      "Marca": {
         "required": [
           "id"
         ],
@@ -525,90 +525,67 @@
           "nombre": {
             "type": "string"
           },
-          "fachada": {
-            "type": "string"
-          },
-          "marca": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "nombre": {
-                "type": "string"
-              },
-              "logo": {
-                "type": "array",
-                "items": {
+          "logo": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "sha256": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
                   "type": "string"
                 }
-              },
-              "isEnable": {
-                "type": "boolean"
               }
             }
           },
-          "floor": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "locals": {
-                "type": "string"
-              }
-            }
-          },
-          "mall": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "location": {
-                "type": "string"
-              },
-              "telephoneNumber": {
-                "type": "string"
-              },
-              "services": {
-                "type": "string"
-              },
-              "floors": {
-                "type": "string"
-              }
-            }
+          "isEnable": {
+            "type": "boolean"
           }
         }
       },
-      "NewTiendas": {
+      "NewMarca": {
         "properties": {
           "nombre": {
             "type": "string"
           },
-          "fachada": {
-            "type": "string"
-          },
-          "marca": {
-            "type": "string"
-          },
-          "floor": {
-            "type": "string"
-          },
-          "mall": {
-            "type": "string"
+          "isEnable": {
+            "type": "boolean"
           }
         }
       }
@@ -616,7 +593,7 @@
   },
   "tags": [
     {
-      "name": "Tiendas"
+      "name": "Marca"
     }
   ]
 }

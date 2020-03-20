@@ -18,11 +18,11 @@
     "telephoneNumber": {
       "type": "string"
     },
-    "floors": {
-      "collection": "floor"
-    },
     "services": {
       "collection": "services"
+    },
+    "floors": {
+      "collection": "floor"
     }
   }
 }

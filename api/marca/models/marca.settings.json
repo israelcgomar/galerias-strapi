@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "marcas",
+  "info": {
+    "name": "marca"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "logo": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "isEnable": {
+      "type": "boolean"
+    }
+  }
+}

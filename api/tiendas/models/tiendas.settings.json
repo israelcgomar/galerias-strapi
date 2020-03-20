@@ -1,4 +1,6 @@
 {
+  "connection": "default",
+  "collectionName": "tiendas",
   "info": {
     "name": "Tiendas"
   },
@@ -13,20 +15,14 @@
     "fachada": {
       "type": "string"
     },
-    "inquilino": {
-      "model": "inquilinos",
-      "via": "tienda"
-    },
     "marca": {
-      "type": "string"
+      "model": "marca"
     },
-    "local": {
-      "type": "integer"
+    "floor": {
+      "model": "floor"
     },
-    "piso": {
-      "type": "float"
+    "mall": {
+      "model": "mall"
     }
-  },
-  "connection": "default",
-  "collectionName": "tiendas"
+  }
 }
