@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/malls": {
+    "/services": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the services's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Mall"
+                    "$ref": "#/components/schemas/Services"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Mall"
+          "Services"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new services record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mall"
+                  "$ref": "#/components/schemas/Services"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Mall"
+          "Services"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMall"
+                "$ref": "#/components/schemas/NewServices"
               }
             }
           }
         }
       }
     },
-    "/malls/count": {
+    "/services/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of services documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Mall"
+          "Services"
         ],
         "parameters": []
       }
     },
-    "/malls/{id}": {
+    "/services/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one services record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mall"
+                  "$ref": "#/components/schemas/Services"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Mall"
+          "Services"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single services record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Mall"
+                  "$ref": "#/components/schemas/Services"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Mall"
+          "Services"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewMall"
+                "$ref": "#/components/schemas/NewServices"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single services record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single services based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Mall"
+          "Services"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Mall": {
+      "Services": {
         "required": [
           "id"
         ],
@@ -522,64 +522,20 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "tipo": {
             "type": "string"
           },
-          "location": {
+          "price": {
             "type": "string"
-          },
-          "telephoneNumber": {
-            "type": "string"
-          },
-          "floors": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "locals": {
-                "type": "string"
-              }
-            }
-          },
-          "services": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "tipo": {
-                "type": "string"
-              },
-              "price": {
-                "type": "string"
-              }
-            }
           }
         }
       },
-      "NewMall": {
+      "NewServices": {
         "properties": {
-          "name": {
+          "tipo": {
             "type": "string"
           },
-          "location": {
-            "type": "string"
-          },
-          "telephoneNumber": {
-            "type": "string"
-          },
-          "floors": {
-            "type": "string"
-          },
-          "services": {
+          "price": {
             "type": "string"
           }
         }
@@ -588,7 +544,7 @@
   },
   "tags": [
     {
-      "name": "Mall"
+      "name": "Services"
     }
   ]
 }

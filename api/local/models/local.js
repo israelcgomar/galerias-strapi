@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Lifecycle callbacks for the `inquilinos` model.
+ * Lifecycle callbacks for the `local` model.
  */
 
 module.exports = {

@@ -14,7 +14,12 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
+<<<<<<< HEAD
     "x-generation-date": "03/18/2020 11:42:59 AM"
+=======
+
+    "x-generation-date": "03/17/2020 3:34:40 PM"
+>>>>>>> 954930bb0087c73fe536678c2d9e8f381e66ad07
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -44,518 +49,7 @@
     }
   ],
   "paths": {
-    "/inquilinos": {
-      "get": {
-        "deprecated": false,
-        "description": "Find all the inquilinos's records",
-        "responses": {
-          "200": {
-            "description": "Retrieve inquilinos document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Inquilinos"
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Inquilinos"
-        ],
-        "parameters": [
-          {
-            "name": "_limit",
-            "in": "query",
-            "required": false,
-            "description": "Maximum number of results possible",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_sort",
-            "in": "query",
-            "required": false,
-            "description": "Sort according to a specific field.",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_start",
-            "in": "query",
-            "required": false,
-            "description": "Skip a specific number of entries (especially useful for pagination)",
-            "schema": {
-              "type": "integer"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "=",
-            "in": "query",
-            "required": false,
-            "description": "Get entries that matches exactly your input",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_ne",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are not equals to something",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lt",
-            "in": "query",
-            "required": false,
-            "description": "Get record that are lower than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_lte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are lower than or equal to a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gt",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_gte",
-            "in": "query",
-            "required": false,
-            "description": "Get records that are greater than  or equal a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_contains",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_containss",
-            "in": "query",
-            "required": false,
-            "description": "Get records that contains (case sensitive) a value",
-            "schema": {
-              "type": "string"
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_in",
-            "in": "query",
-            "required": false,
-            "description": "Get records that matches any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          },
-          {
-            "name": "_nin",
-            "in": "query",
-            "required": false,
-            "description": "Get records that doesn't match any value in the array of values",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "deprecated": false
-          }
-        ]
-      },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new inquilinos record",
-        "responses": {
-          "200": {
-            "description": "Retrieve inquilinos document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Inquilinos"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Inquilinos"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewInquilinos"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/inquilinos/count": {
-      "get": {
-        "deprecated": false,
-        "description": "Retrieve the numver of inquilinos documents",
-        "responses": {
-          "200": {
-            "description": "Retrieve inquilinos document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "count": {
-                      "type": "integer"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Inquilinos"
-        ],
-        "parameters": []
-      }
-    },
-    "/inquilinos/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "Find one inquilinos record",
-        "responses": {
-          "200": {
-            "description": "Retrieve inquilinos document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Inquilinos"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Inquilinos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "put": {
-        "deprecated": false,
-        "description": "Update a single inquilinos record",
-        "responses": {
-          "200": {
-            "description": "Retrieve inquilinos document(s)",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Inquilinos"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Inquilinos"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewInquilinos"
-              }
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
-      "delete": {
-        "deprecated": false,
-        "description": "Delete a single inquilinos record",
-        "responses": {
-          "200": {
-            "description": "deletes a single inquilinos based on the ID supplied",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "int64"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Inquilinos"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      }
-    },
-    "/jefe-marcas": {
+    "/floors": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -565,10 +59,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Floor"
                   }
                 }
               }
@@ -607,7 +100,7 @@
         },
         "summary": "",
         "tags": [
-          "Jefe-marca"
+          "Floor"
         ],
         "parameters": [
           {
@@ -757,11 +250,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Floor"
                 }
               }
             }
@@ -799,7 +288,7 @@
         },
         "summary": "",
         "tags": [
-          "Jefe-marca"
+          "Floor"
         ],
         "requestBody": {
           "description": "",
@@ -807,14 +296,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewJefe-marca"
+                "$ref": "#/components/schemas/NewFloor"
               }
             }
           }
         }
       }
     },
-    "/jefe-marcas/count": {
+    "/floors/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -825,8 +314,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -866,12 +355,12 @@
         },
         "summary": "",
         "tags": [
-          "Jefe-marca"
+          "Floor"
         ],
         "parameters": []
       }
     },
-    "/jefe-marcas/{id}": {
+    "/floors/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -881,11 +370,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Floor"
                 }
               }
             }
@@ -923,7 +408,7 @@
         },
         "summary": "",
         "tags": [
-          "Jefe-marca"
+          "Floor"
         ],
         "parameters": [
           {
@@ -947,11 +432,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Floor"
                 }
               }
             }
@@ -989,7 +470,7 @@
         },
         "summary": "",
         "tags": [
-          "Jefe-marca"
+          "Floor"
         ],
         "requestBody": {
           "description": "",
@@ -997,7 +478,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewJefe-marca"
+                "$ref": "#/components/schemas/NewFloor"
               }
             }
           }
@@ -1063,7 +544,518 @@
         },
         "summary": "",
         "tags": [
-          "Jefe-marca"
+          "Floor"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/locals": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Local"
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Local"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Local"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Local"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLocal"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/locals/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "count": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Local"
+        ],
+        "parameters": []
+      }
+    },
+    "/locals/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Local"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Local"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Local"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Local"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewLocal"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Local"
         ],
         "parameters": [
           {
@@ -2101,19 +2093,19 @@
         ]
       }
     },
-    "/tiendas": {
+    "/services": {
       "get": {
         "deprecated": false,
-        "description": "Find all the tiendas's records",
+        "description": "Find all the services's records",
         "responses": {
           "200": {
-            "description": "Retrieve tiendas document(s)",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Tiendas"
+                    "$ref": "#/components/schemas/Services"
                   }
                 }
               }
@@ -2152,7 +2144,7 @@
         },
         "summary": "",
         "tags": [
-          "Tiendas"
+          "Services"
         ],
         "parameters": [
           {
@@ -2295,14 +2287,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new tiendas record",
+        "description": "Create a new services record",
         "responses": {
           "200": {
-            "description": "Retrieve tiendas document(s)",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tiendas"
+                  "$ref": "#/components/schemas/Services"
                 }
               }
             }
@@ -2340,7 +2332,7 @@
         },
         "summary": "",
         "tags": [
-          "Tiendas"
+          "Services"
         ],
         "requestBody": {
           "description": "",
@@ -2348,20 +2340,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTiendas"
+                "$ref": "#/components/schemas/NewServices"
               }
             }
           }
         }
       }
     },
-    "/tiendas/count": {
+    "/services/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of tiendas documents",
+        "description": "Retrieve the numver of services documents",
         "responses": {
           "200": {
-            "description": "Retrieve tiendas document(s)",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -2407,22 +2399,22 @@
         },
         "summary": "",
         "tags": [
-          "Tiendas"
+          "Services"
         ],
         "parameters": []
       }
     },
-    "/tiendas/{id}": {
+    "/services/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one tiendas record",
+        "description": "Find one services record",
         "responses": {
           "200": {
-            "description": "Retrieve tiendas document(s)",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tiendas"
+                  "$ref": "#/components/schemas/Services"
                 }
               }
             }
@@ -2460,7 +2452,7 @@
         },
         "summary": "",
         "tags": [
-          "Tiendas"
+          "Services"
         ],
         "parameters": [
           {
@@ -2477,14 +2469,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single tiendas record",
+        "description": "Update a single services record",
         "responses": {
           "200": {
-            "description": "Retrieve tiendas document(s)",
+            "description": "Retrieve services document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tiendas"
+                  "$ref": "#/components/schemas/Services"
                 }
               }
             }
@@ -2522,7 +2514,7 @@
         },
         "summary": "",
         "tags": [
-          "Tiendas"
+          "Services"
         ],
         "requestBody": {
           "description": "",
@@ -2530,7 +2522,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTiendas"
+                "$ref": "#/components/schemas/NewServices"
               }
             }
           }
@@ -2550,10 +2542,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single tiendas record",
+        "description": "Delete a single services record",
         "responses": {
           "200": {
-            "description": "deletes a single tiendas based on the ID supplied",
+            "description": "deletes a single services based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -2596,7 +2588,7 @@
         },
         "summary": "",
         "tags": [
-          "Tiendas"
+          "Services"
         ],
         "parameters": [
           {
@@ -4770,7 +4762,7 @@
   },
   "components": {
     "schemas": {
-      "Inquilinos": {
+      "Floor": {
         "required": [
           "id"
         ],
@@ -4781,31 +4773,33 @@
           "name": {
             "type": "string"
           },
-          "telephoneNumber": {
-            "type": "integer"
-          },
-          "extensionNumber": {
-            "type": "integer"
-          },
-          "cellphoneNumber": {
-            "type": "integer"
-          },
-          "email": {
+          "locals": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "number": {
+                "type": "string"
+              },
+              "isRented": {
+                "type": "boolean"
+              },
+              "area": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "NewFloor": {
+        "properties": {
+          "name": {
             "type": "string"
           },
-          "createdAt": {
-            "type": "datetime"
-          },
-          "updatedAt": {
-            "type": "datetime"
-          },
-          "isEnabled": {
-            "type": "boolean"
-          },
-          "tiendas": {
-            "type": "object"
-          },
-          "type": {
+          "locals": {
             "type": "string"
           },
           "tienda": {
@@ -4838,36 +4832,34 @@
           }
         }
       },
-      "NewInquilinos": {
+      "Local": {
+        "required": [
+          "id"
+        ],
         "properties": {
-          "name": {
+          "id": {
             "type": "string"
           },
-          "telephoneNumber": {
-            "type": "integer"
-          },
-          "extensionNumber": {
-            "type": "integer"
-          },
-          "cellphoneNumber": {
-            "type": "integer"
-          },
-          "email": {
+          "number": {
             "type": "string"
           },
-          "createdAt": {
-            "type": "datetime"
-          },
-          "updatedAt": {
-            "type": "datetime"
-          },
-          "isEnabled": {
+          "isRented": {
             "type": "boolean"
           },
-          "tiendas": {
-            "type": "object"
+          "area": {
+            "type": "string"
+          }
+        }
+      },
+      "NewLocal": {
+        "properties": {
+          "number": {
+            "type": "string"
           },
-          "type": {
+          "isRented": {
+            "type": "boolean"
+          },
+          "area": {
             "type": "string"
           },
           "tienda": {
@@ -5047,11 +5039,37 @@
           "telephoneNumber": {
             "type": "string"
           },
-          "services": {
-            "type": "object"
+          "floors": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "locals": {
+                "type": "string"
+              }
+            }
           },
-          "pisos": {
-            "type": "object"
+          "services": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "tipo": {
+                "type": "string"
+              },
+              "price": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -5066,11 +5084,37 @@
           "telephoneNumber": {
             "type": "string"
           },
-          "services": {
-            "type": "object"
+          "floors": {
+            "type": "string"
           },
-          "pisos": {
-            "type": "object"
+          "services": {
+            "type": "string"
+          }
+        }
+      },
+      "Services": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "tipo": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          }
+        }
+      },
+      "NewServices": {
+        "properties": {
+          "tipo": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
           }
         }
       },
@@ -5414,7 +5458,10 @@
   },
   "tags": [
     {
-      "name": "Inquilinos"
+      "name": "Floor"
+    },
+    {
+      "name": "Local"
     },
     {
       "name": "Locales"
@@ -5423,7 +5470,7 @@
       "name": "Mall"
     },
     {
-      "name": "Tiendas"
+      "name": "Services"
     },
     {
       "name": "Email - Email"

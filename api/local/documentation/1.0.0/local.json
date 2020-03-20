@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/inquilinos": {
+    "/locals": {
       "get": {
         "deprecated": false,
-        "description": "Find all the inquilinos's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Inquilinos"
+                    "$ref": "#/components/schemas/Local"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Local"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new inquilinos record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Inquilinos"
+                  "$ref": "#/components/schemas/Local"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Local"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewInquilinos"
+                "$ref": "#/components/schemas/NewLocal"
               }
             }
           }
         }
       }
     },
-    "/inquilinos/count": {
+    "/locals/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of inquilinos documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Local"
         ],
         "parameters": []
       }
     },
-    "/inquilinos/{id}": {
+    "/locals/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one inquilinos record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Inquilinos"
+                  "$ref": "#/components/schemas/Local"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Local"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single inquilinos record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve inquilinos document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Inquilinos"
+                  "$ref": "#/components/schemas/Local"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Local"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewInquilinos"
+                "$ref": "#/components/schemas/NewLocal"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single inquilinos record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single inquilinos based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Inquilinos"
+          "Local"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Inquilinos": {
+      "Local": {
         "required": [
           "id"
         ],
@@ -522,34 +522,13 @@
           "id": {
             "type": "string"
           },
-          "name": {
+          "number": {
             "type": "string"
           },
-          "telephoneNumber": {
-            "type": "integer"
-          },
-          "extensionNumber": {
-            "type": "integer"
-          },
-          "cellphoneNumber": {
-            "type": "integer"
-          },
-          "email": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "datetime"
-          },
-          "updatedAt": {
-            "type": "datetime"
-          },
-          "isEnabled": {
+          "isRented": {
             "type": "boolean"
           },
-          "tiendas": {
-            "type": "object"
-          },
-          "type": {
+          "area": {
             "type": "string"
           },
           "tienda": {
@@ -582,36 +561,15 @@
           }
         }
       },
-      "NewInquilinos": {
+      "NewLocal": {
         "properties": {
-          "name": {
+          "number": {
             "type": "string"
           },
-          "telephoneNumber": {
-            "type": "integer"
-          },
-          "extensionNumber": {
-            "type": "integer"
-          },
-          "cellphoneNumber": {
-            "type": "integer"
-          },
-          "email": {
-            "type": "string"
-          },
-          "createdAt": {
-            "type": "datetime"
-          },
-          "updatedAt": {
-            "type": "datetime"
-          },
-          "isEnabled": {
+          "isRented": {
             "type": "boolean"
           },
-          "tiendas": {
-            "type": "object"
-          },
-          "type": {
+          "area": {
             "type": "string"
           },
           "tienda": {
@@ -623,7 +581,7 @@
   },
   "tags": [
     {
-      "name": "Inquilinos"
+      "name": "Local"
     }
   ]
 }
