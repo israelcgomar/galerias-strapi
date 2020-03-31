@@ -1,0 +1,14 @@
+{
+  "connection": "default",
+  "collectionName": "components_modulos_pisos",
+  "info": {
+    "name": "Locales",
+    "icon": "warehouse"
+  },
+  "options": {},
+  "attributes": {
+    "locales": {
+      "collection": "locales"
+    }
+  }
+}

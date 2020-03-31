@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "locales",
+  "info": {
+    "name": "locales"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "number": {
+      "type": "integer"
+    },
+    "surface": {
+      "type": "decimal"
+    },
+    "isRented": {
+      "type": "boolean"
+    },
+    "isEnable": {
+      "type": "boolean"
+    },
+    "centros_comerciales": {
+      "model": "centros-comerciales"
+    },
+    "piso": {
+      "model": "pisos",
+      "via": "locales"
+    }
+  }
+}

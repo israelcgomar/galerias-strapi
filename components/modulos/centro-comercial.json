@@ -1,0 +1,14 @@
+{
+  "connection": "default",
+  "collectionName": "components_modulos_centro_comercials",
+  "info": {
+    "name": "Centro Comercial",
+    "icon": "store"
+  },
+  "options": {},
+  "attributes": {
+    "centros_comerciale": {
+      "model": "centros-comerciales"
+    }
+  }
+}

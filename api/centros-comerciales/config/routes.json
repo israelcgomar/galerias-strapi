@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/centros-comerciales",
+      "handler": "centros-comerciales.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/centros-comerciales/count",
+      "handler": "centros-comerciales.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/centros-comerciales/:id",
+      "handler": "centros-comerciales.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/centros-comerciales",
+      "handler": "centros-comerciales.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/centros-comerciales/:id",
+      "handler": "centros-comerciales.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/centros-comerciales/:id",
+      "handler": "centros-comerciales.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
     "default": {
       "connector": "mongoose",
       "settings": {
-        "database": "test",
+        "database": "galerias-strapi",
         "host": "cluster-galerias-gtiki.gcp.mongodb.net/test?retryWrites=true",
         "srv": true,
         "port": 27017,

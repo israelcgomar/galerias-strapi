@@ -1,0 +1,14 @@
+{
+  "connection": "default",
+  "collectionName": "components_modulos_servicios",
+  "info": {
+    "name": "Servicios",
+    "icon": "shopping-cart"
+  },
+  "options": {},
+  "attributes": {
+    "servicios": {
+      "collection": "servicios"
+    }
+  }
+}
