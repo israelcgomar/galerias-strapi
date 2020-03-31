@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "tiendas",
+  "info": {
+    "name": "Tiendas"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "fachada": {
+      "type": "string"
+    },
+    "marca": {
+      "model": "marcas",
+      "via": "tienda"
+    },
+    "categoria": {
+      "model": "categorias",
+      "via": "tienda"
+    },
+    "locale": {
+      "model": "locales",
+      "via": "tienda"
+    },
+    "piso": {
+      "model": "pisos"
+    },
+    "centros_comerciale": {
+      "model": "centros-comerciales"
+    },
+    "schedule": {
+      "type": "string"
+    },
+    "isEnable": {
+      "type": "boolean"
+    }
+  }
+}

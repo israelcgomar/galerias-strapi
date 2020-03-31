@@ -587,6 +587,43 @@
                 }
               }
             }
+          },
+          "tienda": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "fachada": {
+                "type": "string"
+              },
+              "marca": {
+                "type": "string"
+              },
+              "categoria": {
+                "type": "string"
+              },
+              "locale": {
+                "type": "string"
+              },
+              "piso": {
+                "type": "string"
+              },
+              "centros_comerciale": {
+                "type": "string"
+              },
+              "schedule": {
+                "type": "string"
+              },
+              "isEnable": {
+                "type": "boolean"
+              }
+            }
           }
         }
       },
@@ -608,6 +645,9 @@
             "type": "string"
           },
           "piso": {
+            "type": "string"
+          },
+          "tienda": {
             "type": "string"
           }
         }

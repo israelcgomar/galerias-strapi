@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/pisos": {
+    "/tiendas": {
       "get": {
         "deprecated": false,
-        "description": "Find all the pisos's records",
+        "description": "Find all the tiendas's records",
         "responses": {
           "200": {
-            "description": "Retrieve pisos document(s)",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Pisos"
+                    "$ref": "#/components/schemas/Tiendas"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Pisos"
+          "Tiendas"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new pisos record",
+        "description": "Create a new tiendas record",
         "responses": {
           "200": {
-            "description": "Retrieve pisos document(s)",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pisos"
+                  "$ref": "#/components/schemas/Tiendas"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Pisos"
+          "Tiendas"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPisos"
+                "$ref": "#/components/schemas/NewTiendas"
               }
             }
           }
         }
       }
     },
-    "/pisos/count": {
+    "/tiendas/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of pisos documents",
+        "description": "Retrieve the numver of tiendas documents",
         "responses": {
           "200": {
-            "description": "Retrieve pisos document(s)",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Pisos"
+          "Tiendas"
         ],
         "parameters": []
       }
     },
-    "/pisos/{id}": {
+    "/tiendas/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one pisos record",
+        "description": "Find one tiendas record",
         "responses": {
           "200": {
-            "description": "Retrieve pisos document(s)",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pisos"
+                  "$ref": "#/components/schemas/Tiendas"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Pisos"
+          "Tiendas"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single pisos record",
+        "description": "Update a single tiendas record",
         "responses": {
           "200": {
-            "description": "Retrieve pisos document(s)",
+            "description": "Retrieve tiendas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pisos"
+                  "$ref": "#/components/schemas/Tiendas"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Pisos"
+          "Tiendas"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPisos"
+                "$ref": "#/components/schemas/NewTiendas"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single pisos record",
+        "description": "Delete a single tiendas record",
         "responses": {
           "200": {
-            "description": "deletes a single pisos based on the ID supplied",
+            "description": "deletes a single tiendas based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Pisos"
+          "Tiendas"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Pisos": {
+      "Tiendas": {
         "required": [
           "id"
         ],
@@ -525,52 +525,171 @@
           "name": {
             "type": "string"
           },
-          "locales": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "number": {
-                  "type": "integer"
-                },
-                "surface": {
-                  "type": "number"
-                },
-                "isRented": {
-                  "type": "boolean"
-                },
-                "isEnable": {
-                  "type": "boolean"
-                },
-                "centros_comerciales": {
-                  "type": "string"
-                },
-                "piso": {
-                  "type": "string"
-                },
-                "tienda": {
+          "fachada": {
+            "type": "string"
+          },
+          "marca": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "logo": {
+                "type": "string"
+              },
+              "isEnable": {
+                "type": "boolean"
+              },
+              "tienda": {
+                "type": "string"
+              }
+            }
+          },
+          "categoria": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "categoryModule": {
+                "type": "string"
+              },
+              "tag": {
+                "type": "dynamiczone"
+              },
+              "tienda": {
+                "type": "string"
+              }
+            }
+          },
+          "locale": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "number": {
+                "type": "integer"
+              },
+              "surface": {
+                "type": "number"
+              },
+              "isRented": {
+                "type": "boolean"
+              },
+              "isEnable": {
+                "type": "boolean"
+              },
+              "centros_comerciales": {
+                "type": "string"
+              },
+              "piso": {
+                "type": "string"
+              },
+              "tienda": {
+                "type": "string"
+              }
+            }
+          },
+          "piso": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "locales": {
+                "type": "array",
+                "items": {
                   "type": "string"
                 }
               }
             }
+          },
+          "centros_comerciale": {
+            "required": [
+              "id",
+              "Location",
+              "telephoneNumber",
+              "email",
+              "isEnable"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "nameMall": {
+                "type": "string"
+              },
+              "Location": {
+                "type": "string"
+              },
+              "telephoneNumber": {
+                "type": "integer"
+              },
+              "schedule": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "isEnable": {
+                "type": "boolean"
+              },
+              "servicios": {
+                "type": "dynamiczone"
+              }
+            }
+          },
+          "schedule": {
+            "type": "string"
+          },
+          "isEnable": {
+            "type": "boolean"
           }
         }
       },
-      "NewPisos": {
+      "NewTiendas": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "locales": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "fachada": {
+            "type": "string"
+          },
+          "marca": {
+            "type": "string"
+          },
+          "categoria": {
+            "type": "string"
+          },
+          "locale": {
+            "type": "string"
+          },
+          "piso": {
+            "type": "string"
+          },
+          "centros_comerciale": {
+            "type": "string"
+          },
+          "schedule": {
+            "type": "string"
+          },
+          "isEnable": {
+            "type": "boolean"
           }
         }
       }
@@ -578,7 +697,7 @@
   },
   "tags": [
     {
-      "name": "Pisos"
+      "name": "Tiendas"
     }
   ]
 }

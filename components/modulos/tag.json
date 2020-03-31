@@ -1,0 +1,14 @@
+{
+  "connection": "default",
+  "collectionName": "components_modulos_tags",
+  "info": {
+    "name": "Categorias",
+    "icon": "tags"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    }
+  }
+}

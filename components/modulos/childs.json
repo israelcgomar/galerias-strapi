@@ -1,0 +1,14 @@
+{
+  "connection": "default",
+  "collectionName": "components_modulos_childs",
+  "info": {
+    "name": "childs",
+    "icon": "bezier-curve"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    }
+  }
+}

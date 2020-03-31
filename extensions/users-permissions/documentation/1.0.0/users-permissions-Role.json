@@ -580,9 +580,6 @@
                 "id",
                 "username",
                 "email",
-                "telephoneNumber",
-                "extesionNumber",
-                "cellphoneNumber",
                 "nip"
               ],
               "properties": {
@@ -613,15 +610,6 @@
                 "role": {
                   "type": "string"
                 },
-                "telephoneNumber": {
-                  "type": "integer"
-                },
-                "extesionNumber": {
-                  "type": "integer"
-                },
-                "cellphoneNumber": {
-                  "type": "integer"
-                },
                 "centroComercial": {
                   "type": "string"
                 },
@@ -631,11 +619,17 @@
                     "type": "string"
                   }
                 },
-                "userName": {
-                  "type": "string"
-                },
                 "nip": {
                   "type": "string"
+                },
+                "telephoneNumber": {
+                  "type": "integer"
+                },
+                "extesionNumber": {
+                  "type": "integer"
+                },
+                "cellphoneNumber": {
+                  "type": "integer"
                 }
               }
             }

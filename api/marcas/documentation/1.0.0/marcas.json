@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/pisos": {
+    "/marcas": {
       "get": {
         "deprecated": false,
-        "description": "Find all the pisos's records",
+        "description": "Find all the marcas's records",
         "responses": {
           "200": {
-            "description": "Retrieve pisos document(s)",
+            "description": "Retrieve marcas document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Pisos"
+                    "$ref": "#/components/schemas/Marcas"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Pisos"
+          "Marcas"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new pisos record",
+        "description": "Create a new marcas record",
         "responses": {
           "200": {
-            "description": "Retrieve pisos document(s)",
+            "description": "Retrieve marcas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pisos"
+                  "$ref": "#/components/schemas/Marcas"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Pisos"
+          "Marcas"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPisos"
+                "$ref": "#/components/schemas/NewMarcas"
               }
             }
           }
         }
       }
     },
-    "/pisos/count": {
+    "/marcas/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of pisos documents",
+        "description": "Retrieve the numver of marcas documents",
         "responses": {
           "200": {
-            "description": "Retrieve pisos document(s)",
+            "description": "Retrieve marcas document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Pisos"
+          "Marcas"
         ],
         "parameters": []
       }
     },
-    "/pisos/{id}": {
+    "/marcas/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one pisos record",
+        "description": "Find one marcas record",
         "responses": {
           "200": {
-            "description": "Retrieve pisos document(s)",
+            "description": "Retrieve marcas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pisos"
+                  "$ref": "#/components/schemas/Marcas"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Pisos"
+          "Marcas"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single pisos record",
+        "description": "Update a single marcas record",
         "responses": {
           "200": {
-            "description": "Retrieve pisos document(s)",
+            "description": "Retrieve marcas document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Pisos"
+                  "$ref": "#/components/schemas/Marcas"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Pisos"
+          "Marcas"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPisos"
+                "$ref": "#/components/schemas/NewMarcas"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single pisos record",
+        "description": "Delete a single marcas record",
         "responses": {
           "200": {
-            "description": "deletes a single pisos based on the ID supplied",
+            "description": "deletes a single marcas based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Pisos"
+          "Marcas"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Pisos": {
+      "Marcas": {
         "required": [
           "id"
         ],
@@ -525,52 +525,104 @@
           "name": {
             "type": "string"
           },
-          "locales": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "number": {
-                  "type": "integer"
-                },
-                "surface": {
-                  "type": "number"
-                },
-                "isRented": {
-                  "type": "boolean"
-                },
-                "isEnable": {
-                  "type": "boolean"
-                },
-                "centros_comerciales": {
-                  "type": "string"
-                },
-                "piso": {
-                  "type": "string"
-                },
-                "tienda": {
-                  "type": "string"
-                }
+          "logo": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              }
+            }
+          },
+          "isEnable": {
+            "type": "boolean"
+          },
+          "tienda": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "fachada": {
+                "type": "string"
+              },
+              "marca": {
+                "type": "string"
+              },
+              "categoria": {
+                "type": "string"
+              },
+              "locale": {
+                "type": "string"
+              },
+              "piso": {
+                "type": "string"
+              },
+              "centros_comerciale": {
+                "type": "string"
+              },
+              "schedule": {
+                "type": "string"
+              },
+              "isEnable": {
+                "type": "boolean"
               }
             }
           }
         }
       },
-      "NewPisos": {
+      "NewMarcas": {
         "properties": {
           "name": {
             "type": "string"
           },
-          "locales": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "isEnable": {
+            "type": "boolean"
+          },
+          "tienda": {
+            "type": "string"
           }
         }
       }
@@ -578,7 +630,7 @@
   },
   "tags": [
     {
-      "name": "Pisos"
+      "name": "Marcas"
     }
   ]
 }

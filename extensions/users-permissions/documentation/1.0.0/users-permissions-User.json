@@ -1189,9 +1189,6 @@
           "id",
           "username",
           "email",
-          "telephoneNumber",
-          "extesionNumber",
-          "cellphoneNumber",
           "nip"
         ],
         "properties": {
@@ -1249,23 +1246,11 @@
               }
             }
           },
-          "telephoneNumber": {
-            "type": "integer"
-          },
-          "extesionNumber": {
-            "type": "integer"
-          },
-          "cellphoneNumber": {
-            "type": "integer"
-          },
           "centroComercial": {
             "required": [
               "id",
               "username",
               "email",
-              "telephoneNumber",
-              "extesionNumber",
-              "cellphoneNumber",
               "nip"
             ],
             "properties": {
@@ -1296,15 +1281,6 @@
               "role": {
                 "type": "string"
               },
-              "telephoneNumber": {
-                "type": "integer"
-              },
-              "extesionNumber": {
-                "type": "integer"
-              },
-              "cellphoneNumber": {
-                "type": "integer"
-              },
               "centroComercial": {
                 "type": "string"
               },
@@ -1314,11 +1290,17 @@
                   "type": "string"
                 }
               },
-              "userName": {
-                "type": "string"
-              },
               "nip": {
                 "type": "string"
+              },
+              "telephoneNumber": {
+                "type": "integer"
+              },
+              "extesionNumber": {
+                "type": "integer"
+              },
+              "cellphoneNumber": {
+                "type": "integer"
               }
             }
           },
@@ -1371,13 +1353,17 @@
               }
             }
           },
-          "userName": {
-            "type": "string",
-            "maxLength": 5
-          },
           "nip": {
-            "type": "string",
-            "maxLength": 30
+            "type": "string"
+          },
+          "telephoneNumber": {
+            "type": "integer"
+          },
+          "extesionNumber": {
+            "type": "integer"
+          },
+          "cellphoneNumber": {
+            "type": "integer"
           }
         }
       },
@@ -1385,9 +1371,6 @@
         "required": [
           "username",
           "email",
-          "telephoneNumber",
-          "extesionNumber",
-          "cellphoneNumber",
           "nip"
         ],
         "properties": {
@@ -1420,6 +1403,12 @@
           "role": {
             "type": "string"
           },
+          "centroComercial": {
+            "type": "string"
+          },
+          "nip": {
+            "type": "string"
+          },
           "telephoneNumber": {
             "type": "integer"
           },
@@ -1428,17 +1417,6 @@
           },
           "cellphoneNumber": {
             "type": "integer"
-          },
-          "centroComercial": {
-            "type": "string"
-          },
-          "userName": {
-            "type": "string",
-            "maxLength": 5
-          },
-          "nip": {
-            "type": "string",
-            "maxLength": 30
           }
         }
       }

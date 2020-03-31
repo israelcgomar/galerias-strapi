@@ -28,6 +28,10 @@
     "piso": {
       "model": "pisos",
       "via": "locales"
+    },
+    "tienda": {
+      "via": "locale",
+      "model": "tiendas"
     }
   }
 }

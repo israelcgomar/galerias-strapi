@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "categorias",
+  "info": {
+    "name": "Categorias"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "categoryModule": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "dynamiczone",
+      "components": [
+        "modulos.tag",
+        "modulos.childs"
+      ]
+    },
+    "tienda": {
+      "via": "categoria",
+      "model": "tiendas"
+    }
+  }
+}
