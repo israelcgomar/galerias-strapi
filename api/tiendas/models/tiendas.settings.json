@@ -24,10 +24,6 @@
       "model": "categorias",
       "via": "tienda"
     },
-    "locale": {
-      "model": "locales",
-      "via": "tienda"
-    },
     "piso": {
       "model": "pisos"
     },

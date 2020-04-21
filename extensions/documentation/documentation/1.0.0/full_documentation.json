@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/31/2020 11:10:13 AM"
+    "x-generation-date": "04/20/2020 1:24:58 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5871,9 +5871,6 @@
               "categoria": {
                 "type": "string"
               },
-              "locale": {
-                "type": "string"
-              },
               "piso": {
                 "type": "string"
               },
@@ -6020,6 +6017,34 @@
                 }
               ]
             }
+          },
+          "name": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "number": {
+                "type": "integer"
+              },
+              "surface": {
+                "type": "number"
+              },
+              "isRented": {
+                "type": "boolean"
+              },
+              "isEnable": {
+                "type": "boolean"
+              },
+              "centros_comerciale": {
+                "type": "string"
+              },
+              "floor": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -6092,6 +6117,9 @@
                 }
               ]
             }
+          },
+          "name": {
+            "type": "string"
           }
         }
       },
@@ -6115,7 +6143,7 @@
           "isEnable": {
             "type": "boolean"
           },
-          "centros_comerciales": {
+          "centros_comerciale": {
             "required": [
               "id",
               "Location",
@@ -6147,64 +6175,14 @@
               },
               "servicios": {
                 "type": "dynamiczone"
-              }
-            }
-          },
-          "piso": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
               },
               "name": {
                 "type": "string"
-              },
-              "locales": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               }
             }
           },
-          "tienda": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "fachada": {
-                "type": "string"
-              },
-              "marca": {
-                "type": "string"
-              },
-              "categoria": {
-                "type": "string"
-              },
-              "locale": {
-                "type": "string"
-              },
-              "piso": {
-                "type": "string"
-              },
-              "centros_comerciale": {
-                "type": "string"
-              },
-              "schedule": {
-                "type": "string"
-              },
-              "isEnable": {
-                "type": "boolean"
-              }
-            }
+          "floor": {
+            "type": "string"
           }
         }
       },
@@ -6222,13 +6200,10 @@
           "isEnable": {
             "type": "boolean"
           },
-          "centros_comerciales": {
+          "centros_comerciale": {
             "type": "string"
           },
-          "piso": {
-            "type": "string"
-          },
-          "tienda": {
+          "floor": {
             "type": "string"
           }
         }
@@ -6313,9 +6288,6 @@
               "categoria": {
                 "type": "string"
               },
-              "locale": {
-                "type": "string"
-              },
               "piso": {
                 "type": "string"
               },
@@ -6355,40 +6327,6 @@
           },
           "name": {
             "type": "string"
-          },
-          "locales": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "number": {
-                  "type": "integer"
-                },
-                "surface": {
-                  "type": "number"
-                },
-                "isRented": {
-                  "type": "boolean"
-                },
-                "isEnable": {
-                  "type": "boolean"
-                },
-                "centros_comerciales": {
-                  "type": "string"
-                },
-                "piso": {
-                  "type": "string"
-                },
-                "tienda": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
@@ -6396,12 +6334,6 @@
         "properties": {
           "name": {
             "type": "string"
-          },
-          "locales": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       },
@@ -6490,37 +6422,6 @@
               }
             }
           },
-          "locale": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "number": {
-                "type": "integer"
-              },
-              "surface": {
-                "type": "number"
-              },
-              "isRented": {
-                "type": "boolean"
-              },
-              "isEnable": {
-                "type": "boolean"
-              },
-              "centros_comerciales": {
-                "type": "string"
-              },
-              "piso": {
-                "type": "string"
-              },
-              "tienda": {
-                "type": "string"
-              }
-            }
-          },
           "piso": {
             "required": [
               "id"
@@ -6531,12 +6432,6 @@
               },
               "name": {
                 "type": "string"
-              },
-              "locales": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -6572,6 +6467,9 @@
               },
               "servicios": {
                 "type": "dynamiczone"
+              },
+              "name": {
+                "type": "string"
               }
             }
           },
@@ -6595,9 +6493,6 @@
             "type": "string"
           },
           "categoria": {
-            "type": "string"
-          },
-          "locale": {
             "type": "string"
           },
           "piso": {

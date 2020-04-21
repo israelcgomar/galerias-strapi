@@ -524,40 +524,6 @@
           },
           "name": {
             "type": "string"
-          },
-          "locales": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "number": {
-                  "type": "integer"
-                },
-                "surface": {
-                  "type": "number"
-                },
-                "isRented": {
-                  "type": "boolean"
-                },
-                "isEnable": {
-                  "type": "boolean"
-                },
-                "centros_comerciales": {
-                  "type": "string"
-                },
-                "piso": {
-                  "type": "string"
-                },
-                "tienda": {
-                  "type": "string"
-                }
-              }
-            }
           }
         }
       },
@@ -565,12 +531,6 @@
         "properties": {
           "name": {
             "type": "string"
-          },
-          "locales": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       }

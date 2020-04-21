@@ -12,10 +12,6 @@
   "attributes": {
     "name": {
       "type": "string"
-    },
-    "locales": {
-      "via": "piso",
-      "collection": "locales"
     }
   }
 }

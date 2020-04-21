@@ -22,16 +22,12 @@
     "isEnable": {
       "type": "boolean"
     },
-    "centros_comerciales": {
-      "model": "centros-comerciales"
+    "centros_comerciale": {
+      "model": "centros-comerciales",
+      "via": "name"
     },
-    "piso": {
-      "model": "pisos",
-      "via": "locales"
-    },
-    "tienda": {
-      "via": "locale",
-      "model": "tiendas"
+    "floor": {
+      "type": "string"
     }
   }
 }

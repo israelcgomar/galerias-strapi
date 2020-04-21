@@ -592,9 +592,6 @@
               "categoria": {
                 "type": "string"
               },
-              "locale": {
-                "type": "string"
-              },
               "piso": {
                 "type": "string"
               },

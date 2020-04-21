@@ -569,37 +569,6 @@
               }
             }
           },
-          "locale": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "number": {
-                "type": "integer"
-              },
-              "surface": {
-                "type": "number"
-              },
-              "isRented": {
-                "type": "boolean"
-              },
-              "isEnable": {
-                "type": "boolean"
-              },
-              "centros_comerciales": {
-                "type": "string"
-              },
-              "piso": {
-                "type": "string"
-              },
-              "tienda": {
-                "type": "string"
-              }
-            }
-          },
           "piso": {
             "required": [
               "id"
@@ -610,12 +579,6 @@
               },
               "name": {
                 "type": "string"
-              },
-              "locales": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -651,6 +614,9 @@
               },
               "servicios": {
                 "type": "dynamiczone"
+              },
+              "name": {
+                "type": "string"
               }
             }
           },
@@ -674,9 +640,6 @@
             "type": "string"
           },
           "categoria": {
-            "type": "string"
-          },
-          "locale": {
             "type": "string"
           },
           "piso": {

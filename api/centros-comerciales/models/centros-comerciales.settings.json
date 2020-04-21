@@ -43,6 +43,10 @@
       "components": [
         "modulos.servicios"
       ]
+    },
+    "name": {
+      "via": "centros_comerciale",
+      "model": "locales"
     }
   }
 }
